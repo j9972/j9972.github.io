@@ -38,6 +38,7 @@
          }
 
         #home_main div#home_main_profile_box {
+			position: relative;
             text-align: center;
             margin: auto;
             width: 500px;
@@ -46,11 +47,13 @@
             border-radius: 50px;
             margin-top: 50px;
             padding-top: 50px;
+			overflow: hidden;
         }
 
-        #home_main div#home_main_profile_box #home_main_profile {
+        #home_main div#home_main_profile_box .home_main_profile {
             width: 400px;
             height: 400px;
+			margin: 0 50px;
             border-radius: 50%;
             object-fit: cover;
             text-align: center;
@@ -71,17 +74,30 @@
         a:hover {
             color: hotpink;
         }
-
-        #aekja {
-            width: 400px;
-            height: 300px;
-            overflow: hidden;
-            font-size: 0;
-        }
+		
+		#aekja {
+			font-size: 0;
+		}
 
         img.sajindeul {
             object-fit: cover;
         }
+		
+		#button_prev {
+			position: absolute;
+			top: 250px;
+			left: 12px;
+			width: 26px;
+			height: 12px;
+		}
+		
+		#button_next {
+			position: absolute;
+			top: 250px;
+			right: 12px;
+			width: 26px;
+			height: 12px;
+		}
     </style>
 </head>
 
@@ -89,8 +105,11 @@
     <section id="home_main_container">
         <article id="home_main">
             <div id="home_main_profile_box">
-                <h1><img id="home_main_profile" src="images/main/profile.jpg" alt="내 사진">
-                </h1>
+				<div id="aekja">
+					<img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진"><img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진"><img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진"><img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진"><img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진">
+				</div>
+				<button id="button_prev"></button>
+				<button id="button_next"></button>
                 <h1>Dream needs Efforts</h1>
                 <a href="https://www.facebook.com/suyoung9972" target="_blank">Facebook</a>
                 <a href="https://instagram.com/jjungssu000" target="_blank">Instagram</a>
@@ -98,6 +117,10 @@
         </article>
     </section>
     <script>
+		window.onload = function () {
+			const aekja = document.getElementById('aekja');
+			aekja.style.width = aekja.childElementCount * 500 + "px";
+		}
     </script>
 </body>
 

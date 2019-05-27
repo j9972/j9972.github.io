@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>온라인 프로필</title>
+        <meta charset="utf-8">
+    <style>
+        table, th, td{
+            border: 1px solid black; /*1픽셀짜리 테두리*/
+            border-collapse: collapse; /*중복되는 테두리를 한줄로 표시*/
+        }
+        th, td{
+            padding: 15px; /*셀 테두리와 내용 사이의 여백*/
+        }
+    </style>
+    <style>
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        body{
+            background: #ffff00;
+        }
+    </style>
+    <style>h2{color:blue;}</style>
+    </head>
+    <body>
+        <figure>
+        <img src="data:image/jpeg;base64,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" width="450" height="300" alt="주토피아 햄스터">
+        <figcaption><strong>주토피아 햄스터(세언이가 골라준 사진)=it looks like me</strong></figcaption>
+        </figure>
+        <h1>Suyoung Jung<mark><small>(정수영)</small></mark></h1>
+        <p>이메일: j9972@naver.com</p>
+        <h2>Who i am?</h2>
+        <p>요즘 홈페이지를 만들기 위해서 열심히 <b>HTML</b>과 <b>CSS</b>를 공부중이고, <br>
+        이 책을 끝내면 <b>JAVA SCRIPT</b> 입문 편을 공부 하여서w 홈페이지를 <br>
+        도록 노력하겠습니다.</p>
+        <hr>
+            <h2>검색창</h2>
+            <form action="search.php" method="post">
+                <input type="search" title="검색">
+                <input type="submit" title="검색">
+            </form><br>
+            <!--<form action="register.php" autocomplete="on"></form>-->
+            <pre>
+
+            </pre>
+        <hr> 
+            <h2>아이디 비번창 & 개인 정보</h2>
+                <form action="login.php" method="post">
+                    <fieldset>
+                        <legend><mark>로그인 정보</mark></legend>
+                            <ul>
+                                <li><label class="reg">ID &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="text" minlength="4" maxlength="15" autofocus required></label><small style="color:blue;"> (4~15자리 이내의 영문과 숫자)</small></li>
+                                <li><label class="reg">PASS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : <input type="password" minlength="8" maxlength="15" autofocus required></label><small style="color:blue;"> (8~15자리 이내의 영문과 숫자)</small></li>
+                                <li><label class="reg">PASS확인 : <input type="password" minlength="8" maxlength="15" autofocus required></label><small style="color:blue;"> (8~15자리 이내의 영문과 숫자)</small></li>  
+                                <li><input type="submit" title="로그인" value="로그인"></li>
+                            </ul>
+                     </fieldset>
+                     <!--<pre>
+
+                     </pre>
+                     <fieldset>
+                         <legend><mark>이미지를 이용한 로그인 버튼</mark></legend>
+                         <label>ID<input type="text" size="15"></label>
+                         <label>PASS<input type="password" size="15"></label>
+                         <input type="imaage" id="butt" src="http://blogfiles.naver.net/MjAxNzA1MzBfNzcg/MDAxNDk2MTIzMzY5NDEx.vHOPScjqDu4XUH1nnO9gzVdrn0EWalYUUL8tyvpkx7Ug.nCELztbb8P6GR4v8rojg__Aiw1fyTDQRoztQDaqpVVgg.JPEG.pcieroom/%B8%E1%B7%D0_%C4%AB%C4%AB%BF%C0_%B7%CE%B1%D7%C0%CE_%281%29.jpg" alt="로그인"> 
+                     </fieldset>-->
+                     <pre>
+
+                     </pre>
+                     <fieldset>
+                         <legend><mark>개인 정보</mark></legend>
+                            <ul>
+                                <li><label>이름&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="text"></label></li>
+                                <li><label>메일주소 : <input type="email"></label></li>
+                                <li><label>연락처 &nbsp;&nbsp;&nbsp;: <input type="tel"></label></li>
+                                <li><label>홈페이지 : <input type="url"></label></li>
+                            </ul>    
+                     </fieldset>    
+                     <pre>
+
+                     </pre>
+                     <fieldset>
+                         <legend><mark>등록 정보</mark></legend>
+                         <ul>
+                            <li><label>참여인원<small>(최대 100명)</small> <input type="number" min="1" max="100" value="1"step="1">개</label><br>
+                            <li><label>희망인원<small>(최대 100명)</small> <input type="range" min="1" max="100" value="1">개</label>
+                        </ul> 
+                    </fieldset>
+                     <pre>
+
+                     </pre>
+                     <fieldset>
+                         <legend><mark>신청 과목</mark></legend>
+                            <p>이 달에 신청할 과목을 선택하시오.(1과목만 가능)</p><br>
+                            <label><input type="radio" name="subject" vaule="korean">국어</label>
+                            <label><input type="radio" name="subject" vaule="math">수학</label>
+                            <label><input type="radio" name="subject" vaule="science">과학</label>
+                     </fieldset>
+                     <pre>
+
+                    </pre>
+                    <fieldset>
+                        <legend><mark>메일링</mark></legend>
+                           <p>메일로 받고 싶은 뉴스 주제를 선택해 주세요.(복수 선택 가능)</p><br>
+                           <label><input type="checkbox" name="mailing" vaule="news">해외 단신</label>
+                           <label><input type="checkbox" name="mailing" vaule="dialog">5분 회화</label>
+                           <label><input type="checkbox" name="mailing" vaule="morning pops">모닝 팝스</label>
+                    </fieldset>
+                    <pre>
+
+                    </pre>
+                    <fieldset>
+                        <legend><mark>노트북색 추천</mark></legend>
+                            <p>올해 신상 노트북을 사려고 합니다. 색을 추천해 주세요.</p>
+                            <label><input type="color" vaule="#ff00"></label>
+                    </fieldset>
+                    <pre>
+
+                    </pre>
+                    <fieldset>
+                        <legend><mark>조회가간 선택</mark></legend>
+                        <p>비행기를 타고 여행 갔다올 날짜를 확인해보자</p>
+                        <label><input type="date" id="start"></label>
+                        <label><input type="date" id="end"></label>
+                    </fieldset>
+                    <pre>
+
+                    </pre>
+                    <fieldset>
+                        <legend><mark>대관시간을 선택하시오<small>(오늘)</small></mark></legend>
+                            <label>시작 시간<input type="time" value="09:00" id="start"></label><br>
+                            <label>종료 시간<input type="time" value="24:00" id="end"></label>
+                    </fieldset>
+                    <pre>
+
+                    </pre>
+                        <fieldset>
+                            <legend><mark>대관시간을 선택하시오<small>(다른 날짜)</small></mark></legend>
+                                <label>시작 시간<input type="datetime-local" value="2016-05-01T09:00" id="start"></label><br>
+                                <label>종료 시간<input type="datetime-local" value="2016-05-01T24:00" id="end"></label>
+                        </fieldset>
+                    <pre>
+
+                    </pre>
+                        <fieldset>
+                            <legend><mark>메일링 리스트 등록</mark></legend>
+                                <label>메일 주소<input type="text"></label>
+                                <input type="submit" value="제출">
+                                <input type="reset" value="다시 입력">
+                        </fieldset>
+                        <pre>
+
+                        </pre>
+                            <fieldset>
+                                <legend><mark>새탭 열기</mark></legend>
+                                    <label><input type="button" value="새 탭 열기" onclick="window.open()"></label>
+                                    <label><input type="button" value="닫기" onclick="close"></label>
+                            </fieldset>
+                        <pre>
+
+                        </pre>
+                            <fieldset>
+                                <legend><mark>파일첨부</mark></legend>
+                                    <label><input type="file"></label>
+                            </fieldset>
+                        <pre>
+
+                        </pre>
+                        <fieldset>
+                            <legend><mark>수강 과목 & READONLY속성이용 & SELECT와OPTION태그 이용</mark></legend>
+                            <label class="reg">html & css 입문 <input type="text" value="오전 9:00~11:00" readonly="false"></label>
+                            <pre></pre>
+                            <legend><mark>신청자 & 드롭다운</mark></legend>
+                            <label class="reg">이름 <input type="text" id="unname" autofocus required> </label><br>
+                            <label class="reg">학번 <input type="text" autofocus required placeholder="하이픈없이 입력"></label><br>
+                            <label class="reg" for="class">학과</label>
+                            <select id="class">
+                                <optgroup label="과학기술대학교">
+                                    <option value="fashion">패션디자인과</option>
+                                    <option value="soft" selected>소프트웨어학과</option>
+                                    <option value="nano">나노과</option>
+                                    <option value="archie">건축환경공학과</option>
+                                    <option value="archib">건축방재공학과</option>
+                                    <option value="machine">정밀기계학과</option>
+                                    <option value="teeth">치위생과</option>
+                                </optgroup>    
+                                <optgroup label="생태환경">
+                                    <option value="animal">말특수동물학과</option>
+                                    <option value="sports">레저스포츠학과</option>
+                                </optgroup>
+                            </select>
+                        </fieldset>
+                        <pre>
+
+                        </pre>
+                        <fieldset>
+                            <legend><mark>PLACEHOLDER를 이용한 아이디 비번창</mark></legend>
+                            <label  class="reg"><input type="text" placeholder="아이디(4자 이상)"></label><br>
+                            <label  class="reg"><input type="password" placeholder="비밀번호(8자 이상)"></label>
+                        </fieldset>
+                        <pre>
+
+                        </pre>
+                        <fieldset>
+                            <legend><mark>교재 주문</mark></legend>
+                            <label class="reg">교재 <input type="number" value="1" min="1" max="15" step="1"> </label><br>
+                            <label class="reg">단체 주문 <input type="number" vaule="10" min="10" max="100" step="5"></label>
+                        </fieldset>
+                        <pre>
+
+                        </pre>
+                        <fieldset>
+                            <legend><mark>수강 과목을 선택하세요.</mark></legend>
+                            <label>관심분야
+                                <input type="text" id="interest" list="choices">
+                                <datalist id="choices">
+                                    <option value="math" label="미분적분학1"></option>
+                                    <option value="english" label="실용회화"></option>
+                                    <option value="programming" label="프로그래밍 언어1"></option>
+                                    <option value="ict" label="ict수업"></option>
+                                    <option value="writing" label="글쓰기"></option>
+                                    <option value="psychology" label="심리학"></option>
+                                </datalist>
+                            </label>
+                        </fieldset>
+                        <pre>
+
+                        </pre>
+                        <fieldset>
+                            <legend><mark>게시물 작성</mark></legend>
+                            <textarea name="intro" cols="60" rows="5">
+열심히 사는 사람들의 손을 잡아주는 곳 -DO IT
+
+우리는 책을 내기 전에 다시 한 번 물어봅니다.
+"이 책이 사람들에게 도움이 되는가?"
+
+더 쉽고 더 빠르게 지식을 전달하고 싶습니다.
+DO IT의 책을 만나 보세요.
+                            </textarea>
+                        </fieldset>
+                    </form>
+                    <hr><br>
+                    <h2>계산</h2>
+                    <form oninput="result.value=parseInt(num1.value)+parseInt(num2.value)">
+                        <input type="number" name="num1" value="0">
+                        + <input type="number" name="num2" value="0">
+                        =<output name="result" for="num"></output><br>
+                    </form>
+                    <pre></pre>
+                    <form oninput="result.value=parseInt(num1.value)*parseInt(num2.value)"></form>
+                        <input type="number" name="num1" value="0">
+                        * <input type="number" name="num2" value="0">
+                        =<output name="result" for="num"></output>
+                    </form>
+                        <pre></pre>
+                    <form oninput="result.value=parseInt(num1.value)-parseInt(num2.value)"></form>
+                        <input type="number" name="num1" value="0">
+                        - <input type="number" name="num2" value="0">
+                        =<output name="result" for="num"></output>
+                    </form>
+
+            <!--<label>ID(4자 이상)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="text"></label><br>
+            <pre></pre>
+            <label>PASS(8자 이상) :&nbsp;<input type="text"></label>-->
+
+            <!--<label for="user-id">아이디(4자 이상)</label>
+            <input type="text" id="user-id">
+            <label과 input은 떨어져도 가능하다는걸 보여줌-->
+                <pre>
+
+                </pre>
+        <hr>
+        <h2>SNS</h2>
+            <ul>
+                <li><img src="http://blogfiles.naver.net/MjAxNzA5MDhfMTU5/MDAxNTA0ODczNjQ5MDgx.0vThPbjciNERCD5p5qwMUFFXvc6eaAV4G4RpgS1Q_eEg.I7JqC0RrtjWHE7LWmWxgKIrKTTtPw8cPCFM8mWQo8b4g.PNG.krazymouse/%C6%E4%C0%CC%BD%BA%BA%CF.png" width="18" height="18" alt="페이스북"> <a href="https://www.facebook.com/suyoung9972" target="_blank">facebook</a></li>
+                <li><img src="http://post.phinf.naver.net/MjAxNjEyMjVfMjI4/MDAxNDgyNjU4NDcyMzgx.zgq4J9Is8mtn2jJJ4jl8s-n7qvcCVfE7qv-WKDbXzAMg.ipLMMjL4JRN__j2_ZLSNXs-SfWNVlAYBG5AJ610Nqsog.PNG/mug_obj_148265847219773744.jpg" width="18" height="18" alt="인스타그램"> <a href="https://www.instagram.com/jjungssu000" target="_blank">instagram</a></li>
+                <li><img src="http://post.phinf.naver.net/MjAxNjEyMjVfMjI4/MDAxNDgyNjU4NDcyMzgx.zgq4J9Is8mtn2jJJ4jl8s-n7qvcCVfE7qv-WKDbXzAMg.ipLMMjL4JRN__j2_ZLSNXs-SfWNVlAYBG5AJ610Nqsog.PNG/mug_obj_148265847219773744.jpg" width="18" height="18" alt="인스타그램"> <a href="https://www.instagram.com/p_seeon" target="_blank">instagram세언</a></li>
+            </ul>
+            <img src="https://pds.joins.com//news/component/htmlphoto_mmdata/201806/20/53963746-aeb9-4a21-b8a3-1c356e9cf8b1.jpg" width="200" height="100" alt="" useamp="#favrites">
+            <map usemap="favorites">
+                
+                <area shape="rect" coords="10,10,160,200" href="http://www.facebook.com/suyoung9972" target="_blank">
+                <area shape="rect" coords="220,10,380,200" href="http://www.instagram.com/jjungssu000" target="_blank">
+            </map>
+        <hr>
+        <h2>Skills</h2>
+        <ul>
+            <li>사용 언어
+                <ul>
+                    <li><mark>HTML</mark></li>
+                    <li><mark>CSS</mark></li>
+                    <li>JAVASCRIPT</li>
+                </ul>
+            </li>
+            <li>사용툴
+                <ul>
+                    <li><b>VISUAL STUDIO</b></li>
+                    <li>PHOTOSHOP</li>
+                    <li>FilEZILLA</li>
+                </ul>
+            </li>
+        </ul>
+        <hr>
+        <h2>진행률</h2>
+        <ul>
+            <li>
+                <label>10초남음</label>     
+                <progress value="50" max="60"></progress><br>
+                <label>진행률 30퍼</label>
+                <progress value="30" max="100"></progress>
+            </li>
+        </ul>
+        <hr>
+        <h2>METER태그</h2>
+        <ul>
+            <li>
+                <label>점유율 0.8</label>
+                <meter vaulue="0.8" min="0" max="1"></meter>
+            </li>
+            <li>
+                <label>사용량 64%</label>
+                <meter min="0" max="100" value="64"></meter>
+            </li>
+            <li>
+                <label>트래픽 초과</label>
+                <meter min="1024" max="10240" low="2048" high="8192" value="9216"></meter>
+            </li>
+            <li>
+                <label>적절한 트래픽</label>
+                <meter value="0.5" optimum="0.8"></meter>
+            </li>
+        </ul>
+        <hr>
+        <h2>Academic</h2>
+        <table>
+            <caption>학력 사항</caption>
+            <thead>
+                <tr>
+                    <th>출신학교</th>
+                    <th>전공</th>
+                    <th>기간</th>
+                    <th>졸업구분</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>신갈고등학교</th>
+                    <th>(해당사항없음)</th>
+                    <th>2015년03월~2018년2월</th>
+                    <th>졸업</th>
+                </tr>
+               <tr>
+                    <td>경북대학교</td>
+                    <td>소프트웨어학과</td>
+                    <td>2019년3월~2023년2월</td>
+                    <td>&nbsp;&nbsp;재학중</td>
+               </tr> 
+            </tbody>    
+        </table>
+        <pre>
+
+        </pre>
+        <hr>
+        <h2>SVG 이미지 삽입하기</h2>
+        <img src=""><!--질문 후에 다시 해보기-->
+        </body>
+</html>

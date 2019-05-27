@@ -88,7 +88,10 @@
 			top: 250px;
 			left: 12px;
 			width: 26px;
-			height: 12px;
+            padding: 0;
+            border: 0;
+            background: none;
+            transform: scaleX(-1);
 		}
 		
 		#button_next {
@@ -96,8 +99,15 @@
 			top: 250px;
 			right: 12px;
 			width: 26px;
-			height: 12px;
+            padding: 0;
+            border: 0;
+            background: none;
 		}
+
+        #button_prev img,
+        #button_next img {
+            width: 26px;
+        }
     </style>
 </head>
 
@@ -108,8 +118,8 @@
 				<div id="aekja">
 					<img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진"><img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진"><img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진"><img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진"><img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진">
 				</div>
-				<button id="button_prev"></button>
-				<button id="button_next"></button>
+				<button id="button_prev"><img src="http://addplaybuttontoimage.way4info.net/Images/Icons/7.png" alt="prev"></button>
+				<button id="button_next"><img src="http://addplaybuttontoimage.way4info.net/Images/Icons/7.png" alt="next"></button>
                 <h1>Dream needs Efforts</h1>
                 <a href="https://www.facebook.com/suyoung9972" target="_blank">Facebook</a>
                 <a href="https://instagram.com/jjungssu000" target="_blank">Instagram</a>

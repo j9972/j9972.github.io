@@ -77,6 +77,7 @@
 		
 		#aekja {
 			font-size: 0;
+			transition: .5s ease;
 		}
 
         img.sajindeul {
@@ -116,7 +117,11 @@
         <article id="home_main">
             <div id="home_main_profile_box">
 				<div id="aekja">
-					<img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진"><img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진"><img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진"><img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진"><img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진">
+					<img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진">
+					<img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진">
+					<img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진">
+					<img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진">
+					<img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진">
 				</div>
 				<button id="button_prev"><img src="http://addplaybuttontoimage.way4info.net/Images/Icons/7.png" alt="prev"></button>
 				<button id="button_next"><img src="http://addplaybuttontoimage.way4info.net/Images/Icons/7.png" alt="next"></button>
@@ -130,6 +135,19 @@
 		window.onload = function () {
 			const aekja = document.getElementById('aekja');
 			aekja.style.width = aekja.childElementCount * 500 + "px";
+			
+			let index = 1051321560 + aekja.childElementCount;
+			
+			document.getElementById('button_prev').addEventListener('click', function () {
+				--index;
+				console.log(index);
+				aekja.style.transform = "translateX(" + (index % aekja.childElementCount * -500) + "px)";
+			});
+			document.getElementById('button_next').addEventListener('click', function () {
+				++index;
+				console.log(index);
+				aekja.style.transform = "translateX(" + (index % aekja.childElementCount * -500) + "px)";
+			});
 		}
     </script>
 </body>

@@ -59,6 +59,25 @@
             text-align: center;
         }
 
+        #second_main div#second_main_text_box {
+            position: relative;
+            text-align: center;
+            margin: auto;
+            width: 500px;
+            height: 800px;
+            background: #273869;
+            margin-top: 50px;
+            padding-top: 50px;
+			overflow: hidden;
+        }
+
+        #second_main div#second_main_text_box .second_main_text {
+            width: 400px;
+            height: 400px;
+			margin: 0 50px;
+            object-fit: cover;
+            text-align: center;
+        }
         a {
             text-decoration: none;
         }
@@ -109,6 +128,13 @@
         #button_next img {
             width: 26px;
         }
+        .hr_line{
+            border: 0;
+            height: 1px;
+            opacity: .15;
+            margin: 1em 0;
+            background-image: -webkit-linear-gradient(left, #273869, #273869, #273869);
+        }
     </style>
 </head>
 
@@ -118,16 +144,38 @@
             <div id="home_main_profile_box">
 				<div id="aekja">
 					<img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진">
-					<img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진">
-					<img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진">
-					<img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진">
-					<img class="home_main_profile" src="images/main/profile.jpg" alt="내 사진">
+					<img class="home_main_profile" src="images/main/p16.jpg" alt="내 사진">
+					<img class="home_main_profile" src="images/main/p15.jpg" alt="내 사진">
+					<img class="home_main_profile" src="images/main/p11.jpg" alt="내 사진">
+                    <img class="home_main_profile" src="images/main/p9.jpg" alt="내 사진">
+                    <img class="home_main_profile" src="images/main/p8.jpg" alt="내 사진">
+                    <img class="home_main_profile" src="images/main/p4.jpg" alt="내 사진">
+                    <img class="home_main_profile" src="images/main/p17.jpg" alt="내 사진">
 				</div>
 				<button id="button_prev"><img src="http://addplaybuttontoimage.way4info.net/Images/Icons/7.png" alt="prev"></button>
 				<button id="button_next"><img src="http://addplaybuttontoimage.way4info.net/Images/Icons/7.png" alt="next"></button>
                 <h1>Dream needs Efforts</h1>
                 <a href="https://www.facebook.com/suyoung9972" target="_blank">Facebook</a>
                 <a href="https://instagram.com/jjungssu000" target="_blank">Instagram</a>
+                <hr class="hr_line">
+            </div>
+        </article>
+    </section>
+    <section id="second_main_container">
+        <article id="second_main">
+            <div id="second_main_text_box">
+                <div id="second_aekja">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                    <p>6</p>
+                    <p>7</p>
+                    <p>8</p>
+                </div>
+                <button id="button_prev"><img src="http://addplaybuttontoimage.way4info.net/Images/Icons/7.png" alt="prev"></button>
+				<button id="button_next"><img src="http://addplaybuttontoimage.way4info.net/Images/Icons/7.png" alt="next"></button>
             </div>
         </article>
     </section>

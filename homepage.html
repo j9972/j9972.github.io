@@ -199,7 +199,21 @@
 				console.log(index);
 				aekja.style.transform = "translateX(" + (index % aekja.childElementCount * -500) + "px)";
 			});
-		}
+            
+            const text_2 = document.getElementById('text_2');
+
+            let index = 1051321650 + text_2.childElementCount;
+
+            document.getElementById('button_prev').addEventListener('click', function () {
+                --index;
+                text_2.style.transform = "translateX(" + (index % text_2.childElementCount * -500) + "px)" ;
+            });
+
+            document.getElementById('button_next').addEventListener('click', function () {
+				++index;
+				text_2.style.transform = "translateX(" + (text_2 % aekja.childElementCount * -500) + "px)";
+			});
+        }
     </script>
 </body>
 

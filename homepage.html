@@ -107,8 +107,15 @@
         
         #text_2 {
             font-size: 15px;
-            color: #ffffff
+            /* font-size: 0; */
+            color: #ffffff;
+			/* transition: .5s ease; */
         }
+
+        /* #home_main_profile_box #text_2 p.home_main_profile {
+            display: inline-block;
+            font-size: 15px;
+        } */
 
         img.sajindeul {
             object-fit: cover;
@@ -160,7 +167,6 @@
 					<img class="home_main_profile" src="images/main/p11.jpg" alt="내 사진">
                     <img class="home_main_profile" src="images/main/p9.jpg" alt="내 사진">
                     <img class="home_main_profile" src="images/main/p8.jpg" alt="내 사진">
-                    <img class="home_main_profile" src="images/main/p4.jpg" alt="내 사진">
                     <img class="home_main_profile" src="images/main/p17.jpg" alt="내 사진">
                 </div>
                 <h1>Dream needs Efforts</h1>
@@ -174,8 +180,7 @@
                     <p class="home_main_profile">4</p>
                     <p class="home_main_profile">5</p>
                     <p class="home_main_profile">6</p>
-                    <p class="home_main_profile">7</p>
-                    <p class="home_main_profile">8</p>    
+                    <p class="home_main_profile">7</p>   
                 </div>
                 <button id="button_prev"><img src="http://addplaybuttontoimage.way4info.net/Images/Icons/7.png" alt="prev"></button>
 				<button id="button_next"><img src="http://addplaybuttontoimage.way4info.net/Images/Icons/7.png" alt="next"></button>
@@ -185,7 +190,9 @@
     <script>
 		window.onload = function () {
 			const aekja = document.getElementById('aekja');
+			//const t2 = document.getElementById('text_2');
 			aekja.style.width = aekja.childElementCount * 500 + "px";
+			//t2.style.width = t2.childElementCount * 500 + "px";
 			
 			let index = 1051321560 + aekja.childElementCount;
 			
@@ -193,25 +200,13 @@
 				--index;
 				console.log(index);
 				aekja.style.transform = "translateX(" + (index % aekja.childElementCount * -500) + "px)";
+				//t2.style.transform = "translateX(" + (index % t2.childElementCount * -500) + "px)";
 			});
 			document.getElementById('button_next').addEventListener('click', function () {
 				++index;
 				console.log(index);
 				aekja.style.transform = "translateX(" + (index % aekja.childElementCount * -500) + "px)";
-			});
-            
-            const text_2 = document.getElementById('text_2');
-
-            let index = 1051321650 + text_2.childElementCount;
-
-            document.getElementById('button_prev').addEventListener('click', function () {
-                --index;
-                text_2.style.transform = "translateX(" + (index % text_2.childElementCount * -500) + "px)" ;
-            });
-
-            document.getElementById('button_next').addEventListener('click', function () {
-				++index;
-				text_2.style.transform = "translateX(" + (text_2 % aekja.childElementCount * -500) + "px)";
+				//t2.style.transform = "translateX(" + (index % t2.childElementCount * -500) + "px)";
 			});
         }
     </script>

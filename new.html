@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+    <title>드랍다운</title>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+    <div class="hover" id="drink-box">  
+        <img class="drink" id="TERRA" style="cursor:pointer" src="images/main/TERRA IMAGE.jpg" alt="맥주 사진"
+            height="180px">
+        
+        <img class="drink" id="BALLENTINE" style="cursor:pointer" src="images/main/BALLENTINE IMAGE.jpg" alt="발렌타인 사진"
+            height=" 180px">
+    </div>
+    
+    <div class ="bcc" id="bccOverlay"> </div>
+
+    <div class="li-tl">
+        <ul class="sub">
+            <li>카스S(생맥주)</li>
+            <li>오비생(생맥주)</li>
+            <li>버드생(생맥주)</li>
+            <li>레드락생(생맥주)</li>
+            <li>카스330</li>
+            <li>카스500</li>
+            <li>오비골드330</li>
+            <li>오비골드500</li>
+            <li>카스라이트330</li>
+            <li>카스레몬330</li>
+            <li>카스비츠330(24G)</li>
+            <li>오비 바이젠330</li>
+            <li>버드330P</li>
+            <li>카프리330P</li>
+            <li>버드355캔(유흥)</li>
+            <li>카프리캔355</li>
+            <li>버드330(30G)</li>
+            <li>버드500P</li>
+            <li>레드락 엠버라거500</li>
+            <li>버드24G</li>
+            <li>카프리330(24G)</li>
+            <li>버드355캔</li>
+            <li>카스500(가정)20P</li>
+            <li>오비골드500(12G)</li>
+            <li>오비골드640(12G)</li>
+            <li>카스500(12G)</li>
+            <li>카스600(12G)</li>
+            <li>카스라이트(1000)</li>
+            <li>카스라이트(1.6)</li>
+            <li>카스레드(1.6)</li>
+            <li>카스큐팩(1000)가정</li>
+            <li>카스큐팩(1.6)가정</li>
+        </ul>
+    </div>
+
+</body>
+<script  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script >
+    (() => {
+        let imgOn;
+
+        backgroundColorChange = function () {
+            if (this.tagName == 'IMG') {
+                imgOn = this;
+            }
+            if (document.getElementById('bccOverlay').classList.contains('on')) {
+                $("#bccOverlay").slideUp();
+                document.getElementById('bccOverlay').classList.remove('on');
+                document.getElementsByClassName('li-tl')[0].classList.remove('on');
+                imgOn.classList.remove('on')
+                $(".li-tl").slideUp();
+            } else {
+                $("#bccOverlay").slideDown();
+                document.getElementById('bccOverlay').classList.add('on');
+                $(".li-tl").slideDown();
+                document.getElementsByClassName('li-tl')[0].classList.add('on');
+                this.classList.add('on')
+            };
+        };
+
+        const imgList = document.getElementById('drink-box').getElementsByTagName('img');
+
+        for (let i = 0; i < imgList.length; ++i) {
+            imgList[i].addEventListener('click', backgroundColorChange)
+        }
+
+        document.getElementById('bccOverlay').addEventListener("click", backgroundColorChange);
+
+
+    })();
+
+        // $(document).ready(function(){
+        //     $(".drink").click(function(){
+        //         $(".li-tl").slideUp();
+        //     });
+        //     $(".drink").click(function(){
+        //         $(".li-tl").slideDown();
+        //     });
+        // });
+
+        // $(document).ready(function(){
+        //     $(".drink").click(function(){
+        //         $(".li-tl").slideToggle();
+        //     });
+        // });
+</script>
+
+</html>

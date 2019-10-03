@@ -17,7 +17,6 @@ img {
     left:70px;
     width:50px;
     height : 60px;
-    display: intermianl;
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 0px;
@@ -123,3 +122,9 @@ h6 {
     top: 10px;
     font-size: 13px;
 }
+@media only screen and (min-device-width : 1536px) and (max-device-width : 2048px) {
+    }
+ /*아이패드 해상도에 맞춘 반응형 웹*/
+@media only screen and (min-device-width : 1080px) and (max-device-width : 1920px) {
+}
+/*아이폰 6,7,8,9 의 + 해상도에 맞춘 반응형 웹*/

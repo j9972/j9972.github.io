@@ -1,6 +1,5 @@
 body {
     margin: 0px;
-    height: 1000px;
 }
 img {
     width: 100%;
@@ -98,8 +97,10 @@ img {
     width: 100%;
     height: 180px;
     position: relative;
-    margin-top: 50px;
+    top: 160px;
+    /*margin-top: 50px;*/
     bottom: 100px;
+    margin-bottom: 0px;
 }
 #fontFooter1 {
     color: white;
@@ -149,11 +150,10 @@ img {
     left: 0px;
     border: solid 1px white;
 }
-@media only screen and (min-device-width: 1536px) and (max-device-width: 2048px) {
+@media only screen and (max-width: 1536px) {
+}
+@media only screen and (max-width: 2048px) {
 }
 
-/*아이패드 해상도에 맞춘 반응형 웹*/
-@media only screen and (min-device-width: 1080px) and (max-device-width: 1920px) {
-}
-
-/*아이폰 6,7,8,9 의 + 해상도에 맞춘 반응형 웹*/
+/*.tbody 자체를 올려버리고 그 안에 있는 sectiom 자체들을 */
+/*전체를 위로 올려서 아래로 내려간 자리 매꾸면 될거같음*/

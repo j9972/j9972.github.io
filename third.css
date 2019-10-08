@@ -1,86 +1,119 @@
 body {
     margin: 0px;
 }
+
 img {
     width: 100%;
     height: 250px;
-  }
-#headheaderImage{
-    object-fit:cover;
 }
+
+#headheaderImage {
+    object-fit: cover;
+}
+
 .header {
-    background-color: black;
-    height:310px;
- }
- #NIKE {
     position: relative;
-    left:70px;
-    width:50px;
-    height : 60px;
+    background-color: black;
+    height: 290px;
+}
+
+#NIKE {
+    position: relative;
+    left: 70px;
+    width: 50px;
+    height: 60px;
     margin-top: 0px;
     margin-bottom: 0px;
     margin-left: 0px;
 }
+
 #introduce {
-    position: absolute;
-    top: 25px;
-    left: 660px;
     text-align: center;
     font-size: 20px;
     color: white;
-    word-spacing: 70px;
+    word-spacing: 4rem;
     text-decoration: none;
+    position: relative;
+    bottom: 15px;
+    left: 590px;
+    width: calc(100% - 200px);
 }
 
 .centered {
-    position: absolute;
-    top: 170px;
-    left: 860px;
-    color:white;
-    font-weight: bold;
-    font-size: 32px;
-  }
+    /*position: absolute;*/
+    /*top: 170px;*/
+    /*left: 860px;*/
+    /*color: white;*/
+    /*font-weight: bold;*/
+    /*font-size: 32px;*/
+    /*width: calc(100% - 200px);*/
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    position: relative;
+    top: 30px;
+    left: 0px;
+}
+
 h6 {
     position: relative;
     bottom: 20px;
     left: 20px;
 }
+
+#short {
+    position: relative;
+    bottom: -13px;
+    right: 765px;
+    display: block;
+    width: 60px;
+    border-bottom: 3px solid whitesmoke;
+}
+
 #long {
     position: relative;
-    bottom: 105px;
+    display: block;
+    bottom: 85px;
     border-color: white;
 }
+
 .tbody {
     text-align: center;
-    color:black;
+    color: black;
     font-size: 30px;
     position: relative;
     top: 30px;
     left: 0px;
     font-weight: bold;
 }
+
 #callPhoto {
     width: 130px;
     height: 100px;
     position: relative;
-    left: 765px;
+    text-align: center;
+    left: 775px;
     top: 150px;
 }
+
 #arrowPhoto {
     position: relative;
+    text-align: center;
     top: 20px;
-    left: 875px;
+    left: 885px;
     height: 150px;
     width: 80px;
 }
+
 .footer {
     background: url('https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfs9.tistory.com%2Fupload_control%2Fdownload.blog%3Ffhandle%3DYmxvZzIxMDE3NEBmczkudGlzdG9yeS5jb206L2F0dGFjaC81LzU1Ny5qcGc%253D') no-repeat center center;
     background-size: cover;
     width: 100%;
-    height: 185px;
+    height: 175px;
     position: relative;
     top: 160px;
 }
+
 #fontFooter1 {
     color: white;
     position: relative;
@@ -89,6 +122,7 @@ h6 {
     font-weight: bold;
     font-size: 20px;
 }
+
 #hrFooter1 {
     width: 50px;
     border-bottom: 0px;
@@ -99,6 +133,7 @@ h6 {
     left: 0px;
     border: solid 2px white;
 }
+
 #fontFooter2 {
     color: white;
     position: relative;
@@ -106,6 +141,23 @@ h6 {
     top: 15px;
     font-size: 14px;
 }
+
+#fontFooter3 {
+    color: white;
+    position: relative;
+    left: 100px;
+    top: 10px;
+    font-size: 13px;
+}
+
+#fontFooter4 {
+    color: white;
+    position: relative;
+    left: 100px;
+    top: 15px;
+    font-size: 14px;
+}
+
 #hrFooter2 {
     width: 560px;
     text-align: left;
@@ -115,16 +167,12 @@ h6 {
     left: 0px;
     border: solid 1px white;
 }
-#fontFooter3 {
-    color: white;
-    position: relative;
-    left: 100px;
-    top: 10px;
-    font-size: 13px;
+
+@media only screen and (min-device-width: 1536px) and (max-device-width: 2048px) {
 }
-@media only screen and (min-device-width : 1536px) and (max-device-width : 2048px) {
-    }
- /*아이패드 해상도에 맞춘 반응형 웹*/
-@media only screen and (min-device-width : 1080px) and (max-device-width : 1920px) {
+
+/*아이패드 해상도에 맞춘 반응형 웹*/
+@media only screen and (min-device-width: 1080px) and (max-device-width: 1920px) {
 }
+
 /*아이폰 6,7,8,9 의 + 해상도에 맞춘 반응형 웹*/

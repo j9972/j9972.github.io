@@ -71,6 +71,7 @@ a {
 }
 #homeMain div.totalMusic {
     position: relative;
+    left: 25px;
     margin: auto;
     width: 48%;
     height: 300px;
@@ -78,20 +79,19 @@ a {
     border-radius: 50px;
     margin-top: 50px;
     padding-top: 50px;
-    overflow: hidden;
 }
 .totalMusic{
     text-align: left;
     height: 452px; /*앨범이 들어있는 공간을 가로 6개씩 세로 2개로 고정시키기 위한 박스를 만든것*/
     width: 1200px;
 }
-#arrowButton1 {
+#arrowButtonPrev {
     position: absolute;
-    left: -6%;
+    left: -16%;
     top: 16%;
     transform: translateY(-50%) rotate(180deg);
 }
-#arrowButton2 {
+#arrowButtonNext {
      position: absolute;
      right: -16%;
      top: 16%;

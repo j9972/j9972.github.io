@@ -1,0 +1,203 @@
+body {
+    margin: 0px;
+    background-color:black;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+.list1 {
+    display: inline;
+}
+#sing1 {
+    display: inline;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    position: absolute;
+    left: calc(100% / 20);
+    top: 100px;
+    text-align: center;
+    margin: 0;
+}
+#sing2 {
+    display: inline;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    position: absolute;
+    left: calc(100% / 5);
+    top: 100px;
+    text-align: center;
+    margin: 0;
+}
+#homepageName {
+    margin-left: 30px;
+    font: 50px solid;
+    font-weight: bold;
+    font-family: Fantasy, serif;
+    color: powderblue;
+}
+h1 span{
+    font-size: 1em;
+}
+.typeOfSing {
+    overflow: auto;
+    line-height: 70px;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+.headerFont li {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: bold;
+    vertical-align: top;
+    width: calc(100% / 4);
+    float: left;
+    color: #ffffff;
+    cursor: pointer;
+    transition: .2s background-color;
+}
+.headerFont li:hover {
+    background-color: rgba(255, 255, 255, .2);
+}
+a {
+    text-decoration-line: none;
+    color: white;
+}
+#main {
+    position: relative;
+    left: -400px;
+}
+#homeMain div.totalMusic {
+    position: relative;
+    margin: auto;
+    width: 48%;
+    height: 300px;
+    background: slategray;
+    border-radius: 50px;
+    margin-top: 50px;
+    padding-top: 50px;
+    overflow: hidden;
+}
+.totalMusic{
+    text-align: left;
+    height: 452px; /*앨범이 들어있는 공간을 가로 6개씩 세로 2개로 고정시키기 위한 박스를 만든것*/
+    width: 1200px;
+}
+#arrowButton1 {
+    position: absolute;
+    left: -6%;
+    top: 16%;
+    transform: translateY(-50%) rotate(180deg);
+}
+#arrowButton2 {
+     position: absolute;
+     right: -16%;
+     top: 16%;
+     transform: translateY(-50%);
+}
+.lineUpMusic {
+    height: 350px;
+    position: relative;
+    display: inline-block;
+    margin: 70px 50px;
+}
+.mainPhoto {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: -95px;
+    border: 1px solid white;
+    transform: scale(1.0);
+    transition: transform .2s;
+    cursor: pointer;
+}
+.mainPhoto:hover {
+    transform: scale(1.2);
+    z-index: 9;
+
+}
+.waiting {
+    border: 1px solid white;
+    position: absolute;
+    text-align: center;
+    top: 23%;
+    left: calc(100% - 32%);
+    height: 580px;
+    width: 450px;
+}
+#prad {
+    color: white;
+}
+#footer {
+    text-align: right ;
+}
+#footer2 {
+    position: relative;
+    bottom: -55px;
+    margin-left: 130px;
+}
+.text1{
+    color:rgb(69,88,90);
+    font: 40px solid;
+    font-weight: bold;
+    font-family: Fantasy, serif;
+}
+.text2{
+    color:rgb(69,88,90,.8);
+    font: 40px solid;
+    font-weight: bold;
+    font-family: Fantasy, serif;
+}
+.text3{
+    color:rgb(69,88,90,.5);
+    font: 40px solid;
+    font-weight: bold;
+    font-family: Fantasy, serif;
+}
+#home_main div#home_main_profile_box {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    width: 500px;
+    height: 800px;
+    background: #273869;
+    border-radius: 50px;
+    margin-top: 50px;
+    padding-top: 50px;
+    overflow: hidden;
+}
+
+#home_main div#home_main_profile_box .home_main_profile {
+    width: 400px;
+    height: 400px;
+    margin: 0 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    text-align: center;
+}
+
+
+/*#overlay {*/
+/*    position: fixed;*/
+/*    display: none;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    background-color: rgba(0,0,0,0.5);*/
+/*    z-index: 2;*/
+/*    cursor: pointer;*/
+/*}*/
+/*#text{*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    font-size: 50px;*/
+/*    color: white;*/
+/*    transform: translate(-50%,-50%);*/
+/*    -ms-transform: translate(-50%,-50%);*/
+/*}*/

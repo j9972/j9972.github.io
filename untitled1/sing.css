@@ -79,6 +79,7 @@ a {
     border-radius: 50px;
     margin-top: 50px;
     padding-top: 50px;
+    overflow: hidden;
 }
 .totalMusic{
     text-align: left;
@@ -87,14 +88,14 @@ a {
 }
 #arrowButtonPrev {
     position: absolute;
-    left: -16%;
-    top: 16%;
+    left: 24%;
+    top: 48%;
     transform: translateY(-50%) rotate(180deg);
 }
 #arrowButtonNext {
      position: absolute;
-     right: -16%;
-     top: 16%;
+     right:21%;
+     top: 48%;
      transform: translateY(-50%);
 }
 .lineUpMusic {

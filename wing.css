@@ -1,0 +1,29 @@
+body {
+     margin: 0px;
+ }
+article {
+    text-align: center;
+}
+.Header {
+    background-image: url("images/main/배경_대지 1.svg");
+    background-repeat: no-repeat;
+}
+#headerLangBallon {
+    width: 33%;
+    position: relative;
+    top: 155px;
+}
+#headerLangBallonFont1 {
+    margin: 0;
+    text-align: center;
+    color: powderblue;
+    font-size: 2rem;
+    position: relative;
+    top: 25px;
+    font-weight: bold;
+}
+#headerWing {
+    width: 20%;
+}
+
+

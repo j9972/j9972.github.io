@@ -1,17 +1,26 @@
-window.onload = function () {
-    const lineUpMusic = document.getElementById('lineUpMusic');
-    lineUpMusic.style.width = lineUpMusic.childElementCount * 500 + "px";
+var slideIndex = 1;
+showSlides(slideIndex);
 
-    let index = 1051321560 + lineUpMusic.childElementCount;
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
 
-    document.getElementById('buttonPrev').addEventListener('click', function () {
-        --index;
-        console.log(index);
-        lineUpMusic.style.transform = "translateX(" + (index % lineUpMusic.childElementCount * -500) + "px)";
-    });
-    document.getElementById('buttonNext').addEventListener('click', function () {
-        ++index;
-        console.log(index);
-        lineUpMusic.style.transform = "translateX(" + (index % lineUpMusic.childElementCount * -500) + "px)";
-    });
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
 }

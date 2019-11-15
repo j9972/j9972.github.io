@@ -23,38 +23,42 @@
         <article id="homeMain">
             <div  class="totalMusic">
                 <div class="lineUpMusic">
-<!--                    <ul class="album_list">-->
-<!--                        <li class="list1">-->
-                            <img class="mainPhoto" src="images2/Band.jpg" alt="band 사진" >
-<!--                            <span id="sing1">band</span>-->
-<!--                        </li>-->
-<!--                        <li class="list1">-->
-                            <img class="mainPhoto" src="images2/Bamn.jpg" alt="bamn 사진" >
-<!--                            <span id="sing2">bamn</span>-->
-    <!--                    </li>-->
-                            <img class="mainPhoto" src="images2/덜어.jpg" alt="덜어 사진" >
-<!--                            <img class="mainPhoto" src="images2/문제아.jpg" alt="문제아 사진" >-->
-
-                            <img class="mainPhoto" src="images2/관둬.jpg" alt="관둬 사진" >
-                            <img class="mainPhoto" src="images2/그녀를 사랑해줘요.jpg" alt="그녀를 사랑해줘요 사진" >
-                            <img class="mainPhoto" src="images2/조금취했어.jpg" alt="조금 취했어 사진" > <br>
-<!--                            <img class="mainPhoto" src="images2/꿈속에 너.jpg" alt="꿈속에 너 사진" >-->
-
-                            <img class="mainPhoto" src="images2/흔들리는 꽃들속에서.jpg" alt="흔들리는 꽃들속에서 사진" >
-                            <img class="mainPhoto" src="images2/벚꽃엔딩.jpg" alt="벚꽃엔딩 사진" >
-                            <img class="mainPhoto" src="images2/주저하는 연인들을 위해.jpg" alt="주저하는 연인들을 위해 사진" >
-<!--                            <img class="mainPhoto" src="images2/노래방에서.jpg" alt="노래방에서 사진" >-->
-
-                            <img class="mainPhoto" src="images2/Comethru.jpg" alt="Comethru 사진" >
-<!--                            <img class="mainPhoto" src="images2/Believer.jpg" alt="Believer 사진" >-->
-<!--                            <img class="mainPhoto" src="images2/Paris in the rain.jpg" alt="Paris in the rain 사진" >-->
-<!--                            <img class="mainPhoto" src="images2/memories.jpg" alt="memories 사진" >-->
-                    </ul>
+                    <div class="fade">
+                        <div class="numbertext">1/3</div>
+                        <img class="mainPhoto" src="images2/Band.jpg" alt="band 사진" >
+                        <img class="mainPhoto" src="images2/Bamn.jpg" alt="bamn 사진" >
+                        <img class="mainPhoto" src="images2/덜어.jpg" alt="덜어 사진" >
+                        <img class="mainPhoto" src="images2/문제아.jpg" alt="문제아 사진" >
+                        <img class="mainPhoto" src="images2/관둬.jpg" alt="관둬 사진" >
+                        <img class="mainPhoto" src="images2/그녀를 사랑해줘요.jpg" alt="그녀를 사랑해줘요 사진" >
+                        <img class="mainPhoto" src="images2/조금취했어.jpg" alt="조금 취했어 사진" >
+                        <img class="mainPhoto" src="images2/꿈속에 너.jpg" alt="꿈속에 너 사진" >
+                        <img class="mainPhoto" src="images2/흔들리는 꽃들속에서.jpg" alt="흔들리는 꽃들속에서 사진" >
+                        <img class="mainPhoto" src="images2/벚꽃엔딩.jpg" alt="벚꽃엔딩 사진" >
+                    </div>
+<!--                    <div class="fade">-->
+<!--                        <div class="numbertext">2/3</div>-->
+<!--                        <img class="mainPhoto" src="images2/주저하는 연인들을 위해.jpg" alt="주저하는 연인들을 위해 사진" >-->
+<!--                        <img class="mainPhoto" src="images2/노래방에서.jpg" alt="노래방에서 사진" >-->
+<!--                        <img class="mainPhoto" src="images2/Comethru.jpg" alt="Comethru 사진" >-->
+<!--                        <img class="mainPhoto" src="images2/Believer.jpg" alt="Believer 사진" >-->
+<!--                        <img class="mainPhoto" src="images2/Paris in the rain.jpg" alt="Paris in the rain 사진" >-->
+<!--                        <img class="mainPhoto" src="images2/memories.jpg" alt="memories 사진">-->
+<!--                    </div>-->
+<!--                    <div class="fade">-->
+<!--                        <div class="numbertext">3/3</div>-->
+<!--                    </div>-->
                 </div>
             </div>
-            <button id="button_prev"><img class="button" id="arrowButtonPrev"src="images2/arrow.svg" alt="화살표">
-            <button id="button_next"><img class="button" id="arrowButtonNext"src="images2/arrow.svg" alt="화살표">
+            <button id="button_prev"><img class="button" id="arrowButtonPrev" src="images2/arrow.svg" alt="화살표">
+            <button id="button_next"><img class="button" id="arrowButtonNext" src="images2/arrow.svg" alt="화살표">
         </article>
+        <!-- The dots/circles -->
+        <div class="ddoott">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
     </section>
     <aside class="waiting">
         <p id="prad">노래 대기열</p>
@@ -67,3 +71,5 @@
     <script src="sing.js"></script>
 </body>
 </html>
+
+<!--button 버튼 a태그로 바꿔서 하려면 뭐를 수정해야 하는가?-->

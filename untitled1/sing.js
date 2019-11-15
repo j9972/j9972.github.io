@@ -4,12 +4,12 @@ window.onload = function () {
 
     let index = 1051321560 + lineUpMusic.childElementCount;
 
-    document.getElementById('button_prev').addEventListener('click', function () {
+    document.getElementById('buttonPrev').addEventListener('click', function () {
         --index;
         console.log(index);
         lineUpMusic.style.transform = "translateX(" + (index % lineUpMusic.childElementCount * -500) + "px)";
     });
-    document.getElementById('button_next').addEventListener('click', function () {
+    document.getElementById('buttonNext').addEventListener('click', function () {
         ++index;
         console.log(index);
         lineUpMusic.style.transform = "translateX(" + (index % lineUpMusic.childElementCount * -500) + "px)";

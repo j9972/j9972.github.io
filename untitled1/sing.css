@@ -82,7 +82,7 @@ h1 span{
 .numbertext {
     position: absolute;
     font-weight: bolder;
-    top: -12%;
+    top: -35px;
     left: 4%;
     display: inline-block;
     color: white;

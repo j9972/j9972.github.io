@@ -63,12 +63,19 @@ h1 span{
     left: 10%;
     top: 10%;
 }
+#prad {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
 .slider_first {
     display: inline-block;
     background: slategray;
     border-radius: 50px;
     width: 75%;
     height: 80%;
+    margin-top: 3%;
     position: relative;
     top: 8%;
     left: 10%;
@@ -76,22 +83,24 @@ h1 span{
 .slider_first_photocollector {
     display: inline-block;
     position: relative;
-    top: 20%;
+    top: 1%;
     text-align: center;
+    padding: 50px;
 }
 .numbertext {
     position: absolute;
     font-weight: bolder;
-    top: -35px;
+    top: -47px;
     left: 4%;
     display: inline-block;
     color: white;
-    font-size: 25px;
+    font-size: 30px;
  }
 .ddoott {
     text-align:center;
     position: relative;
-    top: 20%;
+    left: calc(-3% + 6px);
+    top: 5%;
   }
 .dot {
     cursor: pointer;
@@ -106,45 +115,32 @@ h1 span{
 .active, .dot:hover {
     background-color: #717171;
 }
-/*#homeMain div.totalMusic {*/
-/*    position: relative;*/
-/*    left: calc(2% - 9px);*/
-/*    margin: auto;*/
-/*    height: 300px;*/
-/*    background: slategray;*/
-/*    border-radius: 50px;*/
-/*    margin-top: 50px;*/
-/*    padding-top: 50px;*/
-/*    width: 48%;*/
-/*    !*min-width: 1000px;*!*/
-/*}*/
-/*.prev, .next {*/
-/*    cursor: pointer;*/
-/*    position: absolute;*/
-/*    top: 46%;*/
-/*    width: auto;*/
-/*    padding: 16px;*/
-/*    margin-top: -22px;*/
-/*    color: white;*/
-/*    font-weight: bold;*/
-/*    font-size: 18px;*/
-/*    transition: 0.6s ease;*/
-/*    border-radius: 0 3px 3px 0;*/
-/*    user-select: none;*/
-/*}*/
-/*.prev {*/
-/*    left: calc(25% - 1px);*/
-/*}*/
-/*!* Position the "next button" to the right *!*/
-/*.next {*/
-/*    right: 22%;*/
-/*    border-radius: 3px 0 0 3px;*/
-/*}*/
+.prev, .next {
+    display: inline-block;
+    position: absolute;
+    top: calc(44% + 5px);
+    cursor: pointer;
+    width: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.prev {
+    left: 5%;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 34%;
+    border-radius: 3px 0 0 3px;
+}
 
-/*!* On hover, add a black background color with a little bit see-through *!*/
-/*.prev:hover, .next:hover {*/
-/*    background-color: rgba(0,0,0,0.8);*/
-/*}*/
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.1);
+}
 /*!*#arrowButtonPrev {*!*/
 /*!*    position: absolute;*!*/
 /*!*    left: 24%;*!*/
@@ -166,8 +162,8 @@ h1 span{
 /*    margin: 70px 50px;*/
 /*}*/
 .mainPhoto {
-    width: 150px;
-    height: 150px;
+    width: 15%;
+    height: auto;
     /*position: relative;*/
     top: -95px;
     border: 1px solid white;

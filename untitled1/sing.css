@@ -86,6 +86,23 @@ h1 span{
     top: 1%;
     text-align: center;
     padding: 50px;
+    /*overflow: hidden;*/
+}
+.slider_second_photocollector {
+    display: inline-block;
+    position: relative;
+    top: 1%;
+    text-align: center;
+    padding: 50px;
+    /*overflow: hidden;*/
+}
+.slider_third_photocollector {
+    display: inline-block;
+    position: relative;
+    top: 1%;
+    text-align: center;
+    padding: 50px;
+    /*overflow: hidden;*/
 }
 .numbertext {
     position: absolute;
@@ -116,11 +133,13 @@ h1 span{
     background-color: #717171;
 }
 .prev, .next {
+    fill:white;
     display: inline-block;
     position: absolute;
     top: calc(44% + 5px);
     cursor: pointer;
-    width: auto;
+    width: 35px;
+    height: 35px;
     color: white;
     font-weight: bold;
     font-size: 30px;
@@ -129,11 +148,11 @@ h1 span{
     user-select: none;
 }
 .prev {
-    left: 5%;
+    left: calc( 5% + 2px);
 }
 /* Position the "next button" to the right */
 .next {
-    right: 34%;
+    right: calc( 33% + 2px);
     border-radius: 3px 0 0 3px;
 }
 
@@ -155,12 +174,6 @@ h1 span{
 /*!*     transform: translateY(-50%);*!*/
 /*!*     cursor: pointer;*!*/
 /*!*}*!*/
-/*.lineUpMusic {*/
-/*    height: 350px;*/
-/*    position: relative;*/
-/*    display: inline-block;*/
-/*    margin: 70px 50px;*/
-/*}*/
 .mainPhoto {
     width: 15%;
     height: auto;
@@ -176,22 +189,6 @@ h1 span{
     transform: scale(1.2);
     z-index: 9;
 }
-/*!* Fading animation *!*/
-/*.fade {*/
-/*    -webkit-animation-name: fade;*/
-/*    -webkit-animation-duration: 1.5s;*/
-/*    animation-name: fade;*/
-/*    animation-duration: 1.5s;*/
-/*}*/
-/*@-webkit-keyframes fade {*/
-/*    from {opacity: .4}*/
-/*    to {opacity: 1}*/
-/*}*/
-/*@keyframes fade {*/
-/*    from {opacity: .4}*/
-/*    to {opacity: 1}*/
-/*}*/
-
 .footer_text {
     display: inline-block;
 }

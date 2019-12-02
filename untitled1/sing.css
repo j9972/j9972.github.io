@@ -87,6 +87,9 @@ h1 span{
     text-align: center;
     padding: 50px;
     /*overflow: hidden;*/
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
 }
 .slider_second_photocollector {
     display: inline-block;
@@ -174,10 +177,15 @@ h1 span{
 /*!*     transform: translateY(-50%);*!*/
 /*!*     cursor: pointer;*!*/
 /*!*}*!*/
+.btn{
+    width: 15%;
+    height: 100%;
+    border: 0;
+    padding: 0;
+}
 .mainPhoto {
     width: 15%;
     height: auto;
-    /*position: relative;*/
     top: -95px;
     border: 1px solid white;
     transform: scale(1.0);
@@ -185,9 +193,24 @@ h1 span{
     cursor: pointer;
     right: -2px;
 }
-.mainPhoto:hover {
-    transform: scale(1.2);
-    z-index: 9;
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    /*color: #f1f1f1;*/
+    width: 15%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 13px;
+    padding: 20px;
+    text-align: center;
+}
+/*transform: scale(1.2);*/
+/*z-index: 9;*/
+.mainPhoto:hover .overlay {
+    opacity: 1;
 }
 .footer_text {
     display: inline-block;
